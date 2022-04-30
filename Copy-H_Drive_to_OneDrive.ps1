@@ -8,7 +8,7 @@ $Path_to_Copy = Read-Host -Prompt 'Please enter the path that you want to copy f
 $Path_length = $Path_to_Copy.Length
 if($Path_to_Copy.EndsWith('\'))
 {
-    cd $Path_to_Copy
+    Set-Location $Path_to_Copy
     $Items = (Get-ChildItem .\* -Recurse)
 }
 else
